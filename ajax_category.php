@@ -21,7 +21,7 @@ public function count_cats($id){
           'id' =>    $id,
         ];
         if ($id AND $this->count_cats($id)>=1) {
-            $query = $this->db->query("SELECT parent FROM categories WHERE parent=:id AND parent!=0", $params);
+            $query = $this->db->query("SELECT id,title, parent FROM categories WHERE parent=:id AND parent!=0", $params);
 
             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 
