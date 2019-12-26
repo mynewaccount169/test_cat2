@@ -13,56 +13,6 @@
     <script src="js/bootstrap.js"></script>
 </head>
 <body>
-<?php
-/*
-class ip extends Db{
-    public function __construct()
-    {
-        $this->db = new Db;
-    }
-
-
-    public function	select_ip(){
-
-        $params = [
-            'ip' => $_SERVER['REMOTE_ADDR'],
-
-
-        ];
-         $query = $this->db->query("SELECT * FROM remote_ip WHERE ip=:ip",$params);
-while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-         $data = $row['ip'];
-    }
-    return $data;
-}
-
-
-    public function	add_ip(){
-
-        $params1 = [
-            'ip' => $_SERVER['REMOTE_ADDR'],
-            'date' => time(),
-
-        ];
-        $params2 = [
-            'date' => time(),
-            'ip_from_base' => $this->select_ip(),
-        ];
-        if($this->select_ip()!=$_SERVER['REMOTE_ADDR']){
-            return $query = $this->db->query("INSERT INTO remote_ip (ip,date_visit)  VALUES (:ip,:date)",$params1);
-
-        }
-        if($this->select_ip()==$_SERVER['REMOTE_ADDR']){
-           return $query = $this->db->query("UPDATE remote_ip SET date_visit=:date WHERE ip=:ip_from_base",$params2);
-
-        }
-    }
-}
-$ip = new ip;
-$ip->add_ip();
- $ip->select_ip();
-*/
- ?>
 
 <div class="modal fade" id="addModal">
     <div class="modal-dialog modal-dialog-centered">
